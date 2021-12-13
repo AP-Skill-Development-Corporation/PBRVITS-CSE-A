@@ -1,0 +1,142 @@
+Day-01[13-12-2021]:
+===================
+	Good Morning to All...
+
+Frontend:
+=========
+	Html5
+	Css3
+	javascript
+	Bootstrap-4
+
+Python Basics:
+==============
+
+	loops
+	data structures[list,tuple,set,dictionary,string]
+	conditioanl statements
+	packages and modules
+
+Python Advanced:
+================
+
+	class:
+	object:
+	constructor:
+
+	Paradigms in oops:
+	==================
+	Inheritance
+	polymorphism
+	abstraction
+	Encapsulation
+
+
+Python Installation:
+====================
+	-> https://python.org
+	-> select os
+	-> select version
+	-> download it
+
+	-> After dowloading double click on it.
+	-> select the option as "install now" and select two check boxes occur at bottom of the installation window.
+
+Python Version Check:
+=====================
+	-> open cmd
+	-> type "python -V"
+
+Python is internal or external command error:
+=============================================
+	-> python path
+		> c:\users\xxxxx\AppData\Programs\Python\Python37\
+	-> Added to environment variable
+
+	-> c:\users\xxxxx\AppData\Programs\Python\Python37\Scripts
+
+	-> ok
+
+Pip Version Check:
+==================
+	-> open cmd
+	-> type "pip -V"
+
+	-> if it is error then add the path to environment variables along with python path
+	-> c:\users\xxxxx\AppData\Programs\Python\Python37\Scripts
+	-> Then click ok
+	-> then open cmd and check the version 
+
+Django Installation:
+====================
+	-> open cmd and type
+		"pip install django==3.0"
+		"pip install django=='user defined versions'"
+	-> yellow color states warning for the pip
+		-> python -m pip install --upgrade pip
+
+Django Version Check:
+=====================
+	-> open cmd
+	-> django-admin --version
+
+	(Or)
+
+	-> open shell
+	-> import django
+	-> django.get_version()
+
+Project Creation:
+=================
+	-> open cmd
+	-> django-admin startproject "projectname"
+
+Running a Project:
+==================
+	-> Open cmd where manage.py exists
+	-> type command as
+		=> manage.py runserver
+	-> If it is not working then we need to type python and to run a server
+		=> python manage.py runserver
+
+User App Creation:
+==================
+	-> In cmd we need to type the command as
+		=> manage.py startapp "appname"
+
+Configuration to run our own app:
+=================================
+	-> Open sublime and configure the path in settings.py
+	-> In settings.py we need to check for "INSTALLED_APPS" for that variable we need to add our appname with single quotes and comma  at last
+	-> After configuring we need to create url path and views for what we need to perform and where to navigate
+
+	path:
+	=====
+		=> path("urlpathname",views.functionname,name="name to access the .html")
+
+HttpResponse:
+=============
+	-> from django.http import HttpResponse
+
+	syntax:
+	-------
+		return HttpResponse("something string")
+		return HttpResponse("<h1>something strnig</h1>")
+		return HttpResponse("<h1 style='property:value'>something strnig</h1>")
+
+Dynamic Url Mapping:
+====================
+	-> path("urlname",views.functionname)
+	-> path("urlname",views.functionname,name="")
+
+	Dynamic url:
+	===========
+		=> path('st/',views.sample), => no parameters
+		=> path('dt/<int:k>/',views.sample2), => single parameter
+		=> path('er/<int:k>/<str:ty>/',views.sample3), => two parameters
+	-> We can pass n number of parameters in url
+
+
+
+
+
