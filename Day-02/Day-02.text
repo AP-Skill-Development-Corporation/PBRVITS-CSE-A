@@ -1,0 +1,64 @@
+Day-02[14-12-2021]:
+===================
+	Good Morning to All..
+
+url => views[functions] => Httpresponse
+
+urls.py
+-------
+path("urlname/",modulename.functionname),
+
+class Classname():
+	def __init__(self,a):
+		self.p = a
+		return self.p
+	
+	def functionname(self):
+		print("Hi welcome {}".format(self.p))	
+
+views.py
+--------
+def functionname(request,a):
+	return HttpResponse("hi Welcome {}".format(a))
+
+Templates:
+==========
+	
+
+render():
+=========
+render(self,"path of .html file",dictionary)
+
+DTL:
+====
+Django Template Language:
+=========================
+	Variable => {{variablename}}
+
+	Conditional Statements:
+	=======================
+	if:
+	{% if condition %}
+		//stmnts
+	{% endif %}
+
+	if-else:
+	{% if condition %}
+		//stmnts
+	{% else %}
+		//stmnts
+	{% endif %}
+
+	elif:
+	
+	{% if condition %}
+		//stmnts
+	{% elif condition %}
+		//stmnts
+	{% elif condition %}
+		//stmnts
+		|        |	
+	{% else %}
+		//stmnts
+	{% endif %}	
+
