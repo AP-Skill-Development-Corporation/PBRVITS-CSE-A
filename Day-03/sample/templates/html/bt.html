@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="card col-md-6 shadow-lg mx-auto">
+			<div class="card-body">
+				<h3 class="bg-info text-light border rounded text-center p-3">Student Register</h3>
+				<form method="post">
+					{% csrf_token %}
+					<label>Roll Number: </label>
+					<input type="text" name="rn" class="form-control">
+					<label>Student Name: </label>
+					<input type="text" name="sn" class="form-control">
+					<label>Select Year: </label>
+					<select class="form-control" name="yr">
+						<option value="0">Select Year</option>
+						<option value="1">1st year</option>
+						<option value="2">2nd year</option>
+						<option value="3">3rd year</option>
+						<option value="4">4th year</option>
+					</select>
+					<input type="submit" value="Create" class="btn btn-outline-success btn-block my-2">
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

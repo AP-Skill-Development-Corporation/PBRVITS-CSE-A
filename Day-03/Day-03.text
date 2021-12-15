@@ -1,0 +1,49 @@
+Day-03[15-12-2021]:
+===================
+	Good Morning to All..
+
+	Static File handling:
+	====================
+	- css
+	- javascript
+	- images
+	- audio
+	- video
+
+	Static folder:
+	==============
+	-> We need to create a fodler in outer of app to access all static files in it.
+	-> static folder configurations:
+
+		settings.py
+		===========
+		STATICFILES_DIRS = [os.path.join(BASE_DIR,"static")]
+
+	{% url 'name' %} => url access
+	{% static 'css folder path with filename' %} => css access
+	{% static 'images/fileaname.extension' %} => images access
+
+	Boostrap-4:
+	===========
+		-> External Files of .css,.js and jquery
+		-> For Responsiveness of a webpage
+		-> Inbuilt styling
+		-> It is a framework for frontend
+
+	colors:
+	======
+	light
+	dark
+	primary
+	info
+	success
+	warning
+	danger
+
+	for background => bg
+	text-center
+	text-light
+
+	btn btn-outline-color btn-block
+	
+
