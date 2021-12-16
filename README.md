@@ -17,3 +17,9 @@
   - Static File Handling with css,javascript and images with sample examples on each
   - Bootstrap 4 Introduction and sample example on baisc process
   - url -> views -> template -> views -> template
+
+## Day-04(16-12-2021):
+  - Model Creation
+  - CRUD Operations in shell
+  - Sample Create operation in html file
+  - urls -> views -> templates -> views -> models -> views -> templates
