@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Form</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{% static 'css/sample.css' %}">
+<script type="text/javascript" src="{% static 'js/demo.js' %}"></script>
+<body>
+	<form>
+		<label>Student Name: </label>
+		<input type="text" name=""><br/>
+		<label>Roll Number: </label>
+		<input type="text" name=""><br/>
+		<label>Year: </label>
+		<select>
+			<option value="1">1st year</option>
+			<option value="2">2nd year</option>
+			<option value="3">3rd year</option>
+			<option value="4">4th year</option>
+		</select><br/>
+		<input type="submit" name="">
+	</form>
+	<img src="{% static 'images/im.jpg' %}">
+</body>
+</html>

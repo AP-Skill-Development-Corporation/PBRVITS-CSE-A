@@ -1,0 +1,195 @@
+Day-04[16-12-2021]:
+==================
+	Good Morning to All...
+
+	def tables(request,a):
+		t={'ta':a,'tb':[]}
+		for i in range(1,11):
+			t['tb'].append([i,a*i])
+			print(t['tb'])
+	return render(request,'html/table.html',t)
+	
+	.html
+	======
+		{% for i,j in tb %}
+			//stmts
+			<p>{{ta}}x{{i}} = {{j}}</p>
+		{% endfor %}
+
+
+	def funationname(request,a):
+		s = {}
+		for i in range(1,11):
+			s[i] = "{} x {:02} = {:02}".format(a,i,a*i)
+		return render(request,'html/table.html',{'d':s.values()})
+
+	table.html
+	----------
+	{% for j in d %}
+		<p>{{j}}</p>
+	{% endfor %}
+
+Port Block solution:
+====================
+	-> In cmd we need to pass the command as 
+		=> manage.py runserver portnumber
+		=> manage.py runserver 1234
+
+	localhost:1234
+
+url => views => templates => views => templates
+
+
+ORM[Object Relational Mapper]:
+==============================
+	-> Database [Models.py] 
+	-> 
+
+model
+=> cmd
+	=> manage.py makemigrations
+		=>0001_initial.py
+		=>0002_msg.py
+		Interfacing file
+	=> manage.py migrate
+	=> id will create automatically by default
+
+	migrations folder is deleted unexpectedly:
+
+	=> manage.py makemigrations "appname"
+	=> manage.py migrate
+
+table:
+======
+	appname_classname
+
+shell:
+======
+	=> from appname.module import classname
+
+	=> classname._meta.get_fields()
+
+	=> classname.__doc__
+
+
+Creating a record:
+==================
+	-> single Record:
+		=> k = classname(roll:345,name:raju)
+		=> k.save()
+
+		Create:
+		========
+		u = classname.objects.create('roll':345,'':raju)
+
+bulk_create:
+============
+	o = classname.objects.bulk_create([
+	classname(filed="value"),
+	classname(filed="value"),
+	])
+
+db browser: For displaying the records in a table whether the data is inerted or not
+==========
+
+Reading:
+========
+	- get
+	- filter
+
+=> get:
+	-> It doesnt allow duplicate values
+	-> It displays error where unknown value is passed for it
+
+	objectname = classname.objects.get(fieldname = serach_value)
+
+	To access values:
+	=================
+	print(objectname.fieldname)
+
+=> filter:
+	-> It alows duplicate values search
+	-> It doesnt display anything if the record values is not in the database
+
+	objectname = classname.objects.filter(fieldname=search_value)
+
+To Display all details in database:
+===================================
+	objectname = classname.objects.all()
+	for iterationavariablename in iterator:
+		print(iterationvariablename.fieldname)
+
+To Display first records:
+=========================
+	objectname = classname.objects.all().first()
+
+To Display last records:
+=========================
+	objectname = classname.objects.all().last()
+
+	or
+
+	objectname = classname.objects.all()[::-1][0]
+
+To Display Particular start and end records:
+=====================================
+	objectname = classname.objects.all()[start:end]
+
+Update:
+=======
+	objectname = classname.objects.get(fieldname=search_value)
+	objectname.fieldname=value
+	objectname.save()
+
+	For Fields
+	==========
+	objectname = classname.objects.all()
+	objectanme.update(fieldname=value)
+
+	no need of save method
+
+Delete:
+=======
+	single record deletion:
+	=> objectname = classname.objects.get(fieldname = select_value)
+	=> objectname.delete()
+
+	Multiple records:
+	=> objectname = classname.objects.filter(fieldname = select_value)
+	=> objectname.delete()
+
+	single line:
+	=> objectname = classname.objects.all().delete()
+
+Task:
+=====
+   def muxtable(request,num):
+       li=[]
+       for i in range(1,11):
+       		li.append("{} * {} = {}".format(num,i,num*i))
+        return render(request,"html/table.html",{'li':li)	
+
+        {% for i in li %}
+        	<p>{{i}}</p>
+        {% endfor %}
+
+
+
+def functionname(paramterlist):
+	//body of the function
+	return -----
+arguments
+=========
+--default arguments
+--keyword arguments
+--positional arguments
+--arbitary arguments
+--arbitary keyword arguments
+
+
+
+default arguments:
+==================
+def func(a,b=3,c):
+	print(a*b*c)
+func(6)
