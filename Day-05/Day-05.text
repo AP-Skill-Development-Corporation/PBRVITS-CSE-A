@@ -1,0 +1,42 @@
+Day-05[17-12-2021]:
+===================
+	Good Morning to All...
+
+	url => include
+
+	syntax:
+	=======
+	path('urlname',include('appname.urls')),
+
+points => 1-5
+margin:
+=======
+	m-4
+	margin-top => mt
+	margin-bottom => mb
+	margin-left => ml
+	margin-right => mr
+
+axis:
+======
+	mx => left and right
+	my => top and bottom
+	px => left and right
+	py => top and bottom
+padding:
+========
+	p-4
+	pl
+	pt
+	pb
+	pr
+
+Data access from forms.py
+==========================
+	{{key.as_p}} => paragraphs
+	{{key.as_ul}} => unordered List
+	{{key.as_table}} => table
+
+To apply bootstrap styling we need to use widgets concept:
+
+	widgets = {"fieldname":forms.inputs(attrs="{}")}
