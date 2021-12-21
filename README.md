@@ -29,3 +29,8 @@
   - existing model access
   - form.py creation and useage of widgets for fields
   - creation of user by using default table
+
+## Day-06(18-12-2021):
+  - CRUD Operations by using forms.py
+  - Abstract model class for existing model
+  - message concept
