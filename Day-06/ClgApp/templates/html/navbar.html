@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="{% url 'hm' %}">College</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      {% if not user.is_authenticated %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'ab' %}">Aboutus</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'rgs' %}">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'lg' %}">Login</a>
+      </li>
+      {% elif user.usrole == 2 %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'rg' %}">Student Register</a>
+      </li>
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+    {{request.user.username}}
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Change Password</a>
+    <a class="dropdown-item" href="{% url 'lgo' %}">Logout</a>
+  </div>
+</div>
+      {% else %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'hm' %}">Home</a>
+      </li>
+      <div class="dropdown">
+  <a class="nav-link dropdown-toggle" data-toggle="dropdown">
+    {{request.user.username}}
+  </a>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Profile</a>
+    <a class="dropdown-item" href="#">Change Password</a>
+    <a class="dropdown-item" href="{% url 'lgo' %}">Logout</a>
+  </div>
+</div>
+      {% endif %}    
+    </ul>
+  </div>  
+</nav>

@@ -1,0 +1,49 @@
+{% extends 'html/base.html' %}
+{% block title %}Registration{% endblock %}
+{% block content %}
+<div class="container mt-4">
+
+{% if messages %}
+{% for m in messages %}
+<div class="alert alert-{{m.tags}} alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{m}}
+</div>
+{% endfor %}
+{% endif %}
+	<div class="row">
+		<div class="card col-md-4 shadow-lg border success mx-2 h-100">
+		<div class="card-body">
+			<h3 class="bg-warning text-center text-light p-3 border rounded">Register</h3>
+			<form method="post">
+				{% csrf_token %}
+			{% for i in g %}
+				{{i}}
+			{% endfor %}
+			<input type="submit" value="Create" class="btn btn-outline-success my-2 btn-block">
+			</form>
+		</div>
+	</div>
+		<div class="card col-md">
+			<div class="card-body">
+				<h3>User Details</h3>
+				<table class="table table-borderless table-hover">
+					<tr class="bg-dark text-light">
+						<th>s.no</th>
+						<th>username</th>
+						<th>Actions</th>
+					</tr>
+					{% for j in q %}
+					<tr>
+						<td>{{forloop.counter}}</td>
+						<td>{{j.0}}</td>
+						<td><a href="{% url 'up' j.1 %}" class="btn btn-outline-primary mx-1">Edit</a><a href="{% url 'uvw' j.1 %}" class="btn btn-outline-warning mx-1">View</a><a href="{% url 'dl' j.1 %}" class="btn btn-outline-danger mx-1">Delete</a></td>
+					</tr>
+					{% endfor %}
+				</table>
+			</div>	
+		</div>
+	</div>
+</div>
+{% endblock %}
+
