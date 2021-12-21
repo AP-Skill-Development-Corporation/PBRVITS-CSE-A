@@ -23,3 +23,9 @@
   - CRUD Operations in shell
   - Sample Create operation in html file
   - urls -> views -> templates -> views -> models -> views -> templates
+
+## Day-05(17-12-2021):
+  - Creation of navbar with include and extends
+  - existing model access
+  - form.py creation and useage of widgets for fields
+  - creation of user by using default table
