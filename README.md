@@ -34,3 +34,4 @@
   - CRUD Operations by using forms.py
   - Abstract model class for existing model
   - message concept
+  - Login,logout and user role types
